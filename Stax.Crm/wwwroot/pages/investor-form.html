@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Инвестор — редактирование</title>
+    <link rel="stylesheet" href="/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <div id="topbar"></div>
+    <div class="container-fluid px-4 py-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="card-head">
+                    <div>
+                        <h1 class="h4 mb-1" id="h">Инвестор</h1>
+                        <div class="text-muted" id="hint"></div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-outline-secondary" id="btnBack" href="/pages/investors.html"><i data-lucide="arrow-left"></i> Назад</a>
+                        <button class="btn btn-warning" id="btnSave" type="button"><i data-lucide="save"></i> Сохранить</button>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Фамилия</label>
+                        <input class="form-control" id="lastName" placeholder="Иванов" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Имя</label>
+                        <input class="form-control" id="firstName" placeholder="Иван" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Отчество (опц.)</label>
+                        <input class="form-control" id="patronymic" placeholder="Иванович" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Телефон</label>
+                        <input class="form-control" id="phone" placeholder="+7 (999) 999-99-99" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        <input class="form-control" id="email" placeholder="mail@example.com" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Паспорт</label>
+                        <input class="form-control" id="passport" placeholder="1234 567890" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">ИНН</label>
+                        <input class="form-control" id="inn" placeholder="ИНН" />
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Комментарий</label>
+                        <textarea class="form-control" id="comment" rows="5" placeholder="Комментарий"></textarea>
+                    </div>
+                </div>
+                <div id="error" class="alert alert-danger mt-3" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/lib/bootstrap.bundle.min.js"></script>
+    <script src="/lib/lucide.min.js"></script>
+    <script src="/lib/motion.js"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/ui-maps.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/topbar.js"></script>
+    <script src="/js/router.js"></script>
+    <script src="/js/investor-form.js"></script>
+</body>
+</html>

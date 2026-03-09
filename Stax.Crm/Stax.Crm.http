@@ -1,0 +1,6 @@
+@Stax.Crm_HostAddress = http://localhost:5102
+
+GET {{Stax.Crm_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

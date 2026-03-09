@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAX — Регистрация</title>
+    <link rel="stylesheet" href="/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <div class="auth-bg">
+        <div class="auth-shape auth-shape--1"></div>
+        <div class="auth-shape auth-shape--2"></div>
+        <div class="auth-shape auth-shape--3"></div>
+    </div>
+
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-logo">
+                <img src="/img/logo.png" alt="STAX" />
+            </div>
+            <h2 class="auth-title">Регистрация</h2>
+            <p class="auth-subtitle">Создайте аккаунт для работы в системе</p>
+
+            <div class="auth-form">
+                <div class="auth-field">
+                    <div class="auth-input-icon"><i data-lucide="user"></i></div>
+                    <input class="form-control auth-input" id="username" placeholder="Логин (минимум 3 символа)" autocomplete="username" />
+                </div>
+                <div class="auth-field">
+                    <div class="auth-input-icon"><i data-lucide="lock"></i></div>
+                    <input class="form-control auth-input" id="password" type="password" placeholder="Пароль (буквы + цифры + символ)" autocomplete="new-password" />
+                    <span class="toggle-password auth-toggle-pwd"><i data-lucide="eye"></i></span>
+                </div>
+                <div class="auth-field">
+                    <div class="auth-input-icon"><i data-lucide="shield-check"></i></div>
+                    <input class="form-control auth-input" id="password2" type="password" placeholder="Повторите пароль" autocomplete="new-password" />
+                    <span class="toggle-password auth-toggle-pwd"><i data-lucide="eye"></i></span>
+                </div>
+
+                <div class="auth-pwd-strength" id="pwdStrength">
+                    <div class="auth-pwd-bar"><div class="auth-pwd-fill" id="pwdFill"></div></div>
+                    <span class="auth-pwd-label" id="pwdLabel"></span>
+                </div>
+
+                <button class="btn btn-warning auth-btn" id="btnRegister" type="button">
+                    <i data-lucide="user-plus"></i> Зарегистрироваться
+                </button>
+
+                <div class="auth-divider"><span>или</span></div>
+
+                <a class="btn btn-outline-secondary auth-btn auth-btn--outline" href="/pages/login.html">
+                    <i data-lucide="arrow-left"></i> Уже есть аккаунт? Войти
+                </a>
+
+                <div id="error" class="alert alert-danger mt-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/lib/bootstrap.bundle.min.js"></script>
+    <script src="/lib/lucide.min.js"></script>
+    <script src="/lib/motion.js"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/register.js"></script>
+    <script>refreshIcons();</script>
+</body>
+</html>

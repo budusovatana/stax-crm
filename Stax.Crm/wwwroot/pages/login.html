@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAX — Вход</title>
+    <link rel="stylesheet" href="/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <div class="auth-bg">
+        <div class="auth-shape auth-shape--1"></div>
+        <div class="auth-shape auth-shape--2"></div>
+        <div class="auth-shape auth-shape--3"></div>
+    </div>
+
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-logo">
+                <img src="/img/logo.png" alt="STAX" />
+            </div>
+            <h2 class="auth-title">Вход в систему</h2>
+            <p class="auth-subtitle">Добро пожаловать в STAX CRM</p>
+
+            <div class="auth-form">
+                <div class="auth-field">
+                    <div class="auth-input-icon"><i data-lucide="user"></i></div>
+                    <input class="form-control auth-input" id="username" placeholder="Логин" autocomplete="username" />
+                </div>
+                <div class="auth-field">
+                    <div class="auth-input-icon"><i data-lucide="lock"></i></div>
+                    <input class="form-control auth-input" id="password" type="password" placeholder="Пароль" autocomplete="current-password" />
+                    <span class="toggle-password auth-toggle-pwd"><i data-lucide="eye"></i></span>
+                </div>
+
+                <button class="btn btn-warning auth-btn" id="btnLogin" type="button">
+                    <i data-lucide="log-in"></i> Войти
+                </button>
+
+                <div class="auth-divider"><span>или</span></div>
+
+                <a class="btn btn-outline-secondary auth-btn auth-btn--outline" href="/pages/register.html">
+                    <i data-lucide="user-plus"></i> Создать аккаунт
+                </a>
+
+                <div id="error" class="alert alert-danger mt-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/lib/bootstrap.bundle.min.js"></script>
+    <script src="/lib/lucide.min.js"></script>
+    <script src="/lib/motion.js"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/login.js"></script>
+    <script>refreshIcons();</script>
+</body>
+</html>

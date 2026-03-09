@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Машина — STAX</title>
+    <link rel="stylesheet" href="/lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <div id="topbar"></div>
+    <div class="container-fluid px-4 py-3">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 class="mb-0" id="title">Машина</h2>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-outline-secondary" id="backBtn" href="/pages/cars.html"><i data-lucide="arrow-left"></i> Назад</a>
+                        <a class="btn btn-warning" id="editBtn" href="#"><i data-lucide="pencil"></i> Редактировать</a>
+                    </div>
+                </div>
+
+                <div class="kv-grid mb-3">
+                    <div class="kv-item"><div class="kv-label">Госномер</div><div class="kv-value" id="plate"></div></div>
+                    <div class="kv-item"><div class="kv-label">Цвет</div><div class="kv-value" id="color"></div></div>
+                    <div class="kv-item"><div class="kv-label">VIN</div><div class="kv-value" id="vin"></div></div>
+                    <div class="kv-item"><div class="kv-label">СТС</div><div class="kv-value" id="sts"></div></div>
+                    <div class="kv-item">
+                        <div class="kv-label">Лизинговая компания</div>
+                        <div class="kv-value" id="owner"></div>
+                        <div class="text-muted small" id="ownerRek" style="display:none;"></div>
+                    </div>
+                    <div class="kv-item"><div class="kv-label">Год</div><div class="kv-value" id="year"></div></div>
+                    <div class="kv-item"><div class="kv-label">Пробег</div><div class="kv-value" id="mileage"></div></div>
+                    <div class="kv-item"><div class="kv-label">ДТП</div><div class="kv-value" id="acc"></div></div>
+                    <div class="kv-item"><div class="kv-label">Цена</div><div class="kv-value" id="price"></div></div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="text-muted small">Комментарий</div>
+                    <div id="comment"></div>
+                </div>
+
+                <hr />
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h3 class="h5 mb-0">Инвестиции по машине</h3>
+                    <a class="btn btn-warning btn-sm" id="addInvBtn" href="#"><i data-lucide="plus"></i> Добавить инвестицию</a>
+                </div>
+
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="text-muted">Сумма активных инвестиций:</span>
+                    <strong id="activeSum">0,00</strong> ₽
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Инвестор</th>
+                                <th>Сумма</th>
+                                <th>Статус</th>
+                                <th>Действие</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invBody"></tbody>
+                    </table>
+                </div>
+                <div id="error" class="alert alert-danger mt-3" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/lib/bootstrap.bundle.min.js"></script>
+    <script src="/lib/lucide.min.js"></script>
+    <script src="/lib/motion.js"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/ui-maps.js"></script>
+    <script src="/js/modal.js"></script>
+    <script src="/js/topbar.js"></script>
+    <script src="/js/router.js"></script>
+    <script src="/js/car-view.js"></script>
+</body>
+</html>
