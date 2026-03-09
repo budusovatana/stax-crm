@@ -4,7 +4,7 @@ WORKDIR /src
 COPY . .
 
 RUN dotnet restore Stax.Crm.sln
-RUN dotnet publish Stax.Crm.sln -c Release -o /app/publish
+RUN dotnet publish Stax.Crm/Stax.Crm.csproj -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
@@ -15,5 +15,4 @@ EXPOSE 8080
 
 ENV ASPNETCORE_URLS=http://+:8080
 
-ENTRYPOINT ["dotnet", "Stax.Api.dll"]
-
+ENTRYPOINT ["dotnet", "Stax.Crm.dll"]
